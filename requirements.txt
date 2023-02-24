@@ -1,0 +1,3 @@
+Requests
+requests_toolbelt
+cloudscraper
