@@ -1,43 +1,81 @@
-import cloudscraper
+import undetected_chromedriver as uc
 
-scraper = cloudscraper.create_scraper()  # returns a CloudScraper instance
+driver = uc.Chrome()
+driver.get("https://home.chicagopolice.org/wp-sitemap-posts-page-1.xml")
+pageSource = driver.page_source
+fileToWrite = open("page-1.xml", "w")
+fileToWrite.write(pageSource)
+fileToWrite.close()
+driver.quit()
 
-a = open("page-1.xml", "w") # w is for truncating files (we want diffs between commits)
-print((scraper.get("https://home.chicagopolice.org/wp-sitemap-posts-page-1.xml").text), file=a)
-a.close()
+driver = uc.Chrome()
+driver.get("https://home.chicagopolice.org/wp-sitemap-posts-post-1.xml")
+pageSource = driver.page_source
+fileToWrite = open("post-1.xml", "w")
+fileToWrite.write(pageSource)
+fileToWrite.close()
+driver.quit()
 
-b = open("post-1.xml", "w")
-print((scraper.get("https://home.chicagopolice.org/wp-sitemap-posts-post-1.xml").text), file=b)
-b.close()
+driver = uc.Chrome()
+driver.get("https://home.chicagopolice.org/wp-sitemap-posts-post-2.xml")
+pageSource = driver.page_source
+fileToWrite = open("post-2.xml", "w")
+fileToWrite.write(pageSource)
+fileToWrite.close()
+driver.quit()
 
-c = open("post-2.xml", "w")
-print((scraper.get("https://home.chicagopolice.org/wp-sitemap-posts-post-2.xml").text), file=c)
-c.close()
+driver = uc.Chrome()
+driver.get("https://home.chicagopolice.org/wp-sitemap-posts-post-3.xml")
+pageSource = driver.page_source
+fileToWrite = open("post-3.xml", "w")
+fileToWrite.write(pageSource)
+fileToWrite.close()
+driver.quit()
 
-d = open("post-3.xml", "w")
-print((scraper.get("https://home.chicagopolice.org/wp-sitemap-posts-post-3.xml").text), file=d)
-d.close()
+driver = uc.Chrome()
+driver.get("https://home.chicagopolice.org/wp-sitemap-posts-draft_policy-1.xml")
+pageSource = driver.page_source
+fileToWrite = open("draft_policy-1.xml", "w")
+fileToWrite.write(pageSource)
+fileToWrite.close()
+driver.quit()
 
-e = open("draft_policy-1.xml", "w")
-print((scraper.get("https://home.chicagopolice.org/wp-sitemap-posts-draft_policy-1.xml").text), file=e)
-e.close()
+driver = uc.Chrome()
+driver.get("https://home.chicagopolice.org/wp-sitemap-taxonomies-category-1.xml")
+pageSource = driver.page_source
+fileToWrite = open("taxonomies-category-1.xml", "w")
+fileToWrite.write(pageSource)
+fileToWrite.close()
+driver.quit()
 
-f = open("taxonomies-category-1.xml", "w")
-print((scraper.get("https://home.chicagopolice.org/wp-sitemap-taxonomies-category-1.xml").text), file=f)
-f.close()
+driver = uc.Chrome()
+driver.get("https://home.chicagopolice.org/wp-sitemap-taxonomies-post_tag-1.xml")
+pageSource = driver.page_source
+fileToWrite = open("taxonomies-post_tag-1.xml", "w")
+fileToWrite.write(pageSource)
+fileToWrite.close()
+driver.quit()
 
-g = open("taxonomies-post_tag-1.xml", "w")
-print((scraper.get("https://home.chicagopolice.org/wp-sitemap-taxonomies-post_tag-1.xml").text), file=g)
-g.close()
+driver = uc.Chrome()
+driver.get("https://home.chicagopolice.org/wp-sitemap-taxonomies-post_format-1.xml")
+pageSource = driver.page_source
+fileToWrite = open("taxonomies-post_format-1.xml", "w")
+fileToWrite.write(pageSource)
+fileToWrite.close()
+driver.quit()
 
-h = open("taxonomies-post_format-1.xml", "w")
-print((scraper.get("https://home.chicagopolice.org/wp-sitemap-taxonomies-post_format-1.xml").text), file=h)
-h.close()
+driver = uc.Chrome()
+driver.get("https://home.chicagopolice.org/wp-sitemap-taxonomies-media_notification_types-1.xml")
+pageSource = driver.page_source
+fileToWrite = open("taxonomies-media_notification_types-1.xml", "w")
+fileToWrite.write(pageSource)
+fileToWrite.close()
+driver.quit()
 
-i = open("taxonomies-media_notification_types-1.xml", "w")
-print((scraper.get("https://home.chicagopolice.org/wp-sitemap-taxonomies-media_notification_types-1.xml").text), file=i)
-i.close()
-
-j = open("users-1.xml", "w")
-print((scraper.get("https://home.chicagopolice.org/wp-sitemap-users-1.xml").text), file=j)
-j.close()
+driver = uc.Chrome()
+driver.get("https://home.chicagopolice.org/wp-sitemap-users-1.xml")
+pageSource = driver.page_source
+fileToWrite = open("users-1.xml", "w")
+fileToWrite.write(pageSource)
+fileToWrite.close()
+driver.quit()
